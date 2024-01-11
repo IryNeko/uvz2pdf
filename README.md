@@ -12,4 +12,4 @@ demo.launch(share=True)
 ### liunx
 similar process, will upload start.sh at the next stage
 
-### this is a pre-project looking at pdf manipulation
+### this is a studying project looking at pdf manipulation
