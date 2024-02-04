@@ -18,24 +18,26 @@ def dpg_to_pdf(path):
     path_list=[]
     new_list=[]
     # doing an ordered hit bok,cov,fow,leg,then all the rest
+    
     for i in list:
-        if "cov" in i:
+        if "cov" in i and i.endswith(".pdg"):
             new_list.append("tmp/"+i)
     for i in list:
-        if "fow" in i:
+        if "fow" in i and i.endswith(".pdg"):
             new_list.append("tmp/"+i)
     for i in list:
-        if "leg" in i:
+        if "leg" in i and i.endswith(".pdg"):
             new_list.append("tmp/"+i)
     for i in list:
-        if "bok" in i:
+        if "bok" in i and i.endswith(".pdg"):
             new_list.append("tmp/"+i)
     for i in list:
-        if ("cov" in i or "fow" in i or "leg" in i or "bok" in i):
+        if ("cov" in i or "fow" in i or "leg" in i or "bok" in i) :
             pass
-        else:
-            if "pdg" in i:
-                new_list.append("tmp/"+i)      
+        else: 
+            if i.endswith(".pdg"):
+                new_list.append("tmp/"+i)
+
     print("there are",len(new_list),"pages in the book")
     out_path=path.replace(".uvz",".pdf")    
     with open(out_path,"wb") as f:
